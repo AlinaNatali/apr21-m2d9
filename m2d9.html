@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    WELCOME TO THE STRIVE TEAM GENERATOR!
+
+    In this app you will generate teams and assign the participants to them.
+    You will use the Bootstrap components for the elements of your app.
+
+    The features are the following:
+    - The user should be able to add a list of names, find a way to get the user input and fill a list with the new name.
+    - The user should be able to set the number of teams he wants, so that they will be generated. A team is just another list to be displayed.
+    - An "Assign" button will be required in order to launch the team generation functionality.
+    - Every time the user clicks on the "Assign" button, a random name is placed in a team and removed from the initial list.
+    - Each team should be inside a "column" to be responsive.
+    - [EXTRA] Create a button to remove a user from a team, and putting him back in the main list, waiting to be reassigned.
+    - [EXTRA] Create a button to reset the state of the app.
+-->
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Group generator</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+    <style>
+        p {
+            font-size: 25px;
+            font-weight: bold;
+            font-family: Gevena;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .first-item {
+            font-weight: bold;
+        }
+
+        input {
+            margin: 5px 10px 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4"><p>Generate your team</p></h1>
+          <p class="lead">A team is a group of individuals (human or non-human) working together to achieve their goal.</p>
+        </div>
+      </div>
+    <div class="container">
+        <ul class="list-group">
+            
+            <li class="list-group-item"><span class="first-item">Put your name</span></li>
+            <li class="list-group-item">name</li>
+        </ul>
+        <input placeholder="add you name">
+        <br>
+        <button onclick="addName()" class="btn btn-outline-dark">Add</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+    <script>
+        // const addName = function () {
+        //     let addNameToList = document.querySelector("input");
+        //     if (addNameToList.value !== "") {
+
+
+        //         let boxValue = textBox.value
+        //         let myButton = document.querySelector("h1");
+        //         document.querySelector("h1").innerText = boxValue;
+
+        //         textBox.value = " "
+
+        // const createTRs = function () {
+        //     for (let rowNumber = 0; rowNumber < 2; ++rowNumber) {
+        //         const row = document.createElement("li");
+        //     for (i = 0; i < 5; i++) {
+
+        //         const th = document.createElement("th");
+        //             th.innerHTML = "(rowNumber: " + rowNumber + ", column: " + i + ")";
+        //             row.appendChild(th);
+        //             document.querySelector("list-group").appendChild(row);
+        //         }
+        //     }
+        // };
+        // createTRs()
+
+        const addName = function () {
+            let newLi = document.createElement("li");
+            newLi.classList.add("list-group-item")
+            document.querySelector("ul").appendChild(newLi)
+            let yourName = document.querySelector("input").value
+            newLi.innerText = yourName
+            // let li = document.createElement("li");
+            // li.appendChild(document.createTextNode("name"));
+            // ul.appendChild(li);
+
+        };
+    
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
